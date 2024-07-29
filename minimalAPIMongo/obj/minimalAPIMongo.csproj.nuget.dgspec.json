@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\32784630803\\Desktop\\MinimalAPIMongo\\minimalAPIMongo\\minimalAPIMongo.csproj": {}
+    "C:\\Users\\32784630803\\Desktop\\Minimal-API-com-.NET-e-MongoDB\\MinimalAPIMongo\\minimalAPIMongo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\32784630803\\Desktop\\MinimalAPIMongo\\minimalAPIMongo\\minimalAPIMongo.csproj": {
+    "C:\\Users\\32784630803\\Desktop\\Minimal-API-com-.NET-e-MongoDB\\MinimalAPIMongo\\minimalAPIMongo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\32784630803\\Desktop\\MinimalAPIMongo\\minimalAPIMongo\\minimalAPIMongo.csproj",
+        "projectUniqueName": "C:\\Users\\32784630803\\Desktop\\Minimal-API-com-.NET-e-MongoDB\\MinimalAPIMongo\\minimalAPIMongo.csproj",
         "projectName": "minimalAPIMongo",
-        "projectPath": "C:\\Users\\32784630803\\Desktop\\MinimalAPIMongo\\minimalAPIMongo\\minimalAPIMongo.csproj",
+        "projectPath": "C:\\Users\\32784630803\\Desktop\\Minimal-API-com-.NET-e-MongoDB\\MinimalAPIMongo\\minimalAPIMongo.csproj",
         "packagesPath": "C:\\Users\\32784630803\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\32784630803\\Desktop\\MinimalAPIMongo\\minimalAPIMongo\\obj\\",
+        "outputPath": "C:\\Users\\32784630803\\Desktop\\Minimal-API-com-.NET-e-MongoDB\\MinimalAPIMongo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\32784630803\\AppData\\Roaming\\NuGet\\NuGet.Config",
