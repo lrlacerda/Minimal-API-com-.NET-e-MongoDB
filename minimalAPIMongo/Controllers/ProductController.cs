@@ -80,6 +80,12 @@ namespace minimalAPIMongo.Controllers
         {
             try
             {
+                // Verifica se o Id fornecido corresponde ao Id do produto a ser atualizado
+                if (updatedProduct.Id != id)
+                {
+                    return BadRequest("Product ID in the request body does not match the ID in the URL.");
+                }
+
                 var filter = Builders<Product>.Filter.Eq(p => p.Id, id);
                 var result = await _product.ReplaceOneAsync(filter, updatedProduct);
 
@@ -95,6 +101,8 @@ namespace minimalAPIMongo.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+
         [HttpDelete("{id:length(24)}")]
         public async Task<ActionResult> Delete(string id)
         {

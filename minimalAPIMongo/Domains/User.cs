@@ -21,6 +21,7 @@ namespace minimalAPIMongo.Domains
         public string Password { get; set; }
 
         // Adiciona um dicionário para atributos adicionais
+        [BsonElement("additionalAttributes")]
         public Dictionary<string, string> AdditionalAttributes { get; set; }
 
         /// <summary>
@@ -32,4 +33,3 @@ namespace minimalAPIMongo.Domains
         }
     }
 }
-

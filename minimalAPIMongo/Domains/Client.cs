@@ -25,6 +25,7 @@ namespace minimalAPIMongo.Domains
         public string Address { get; set; }
 
         // Adiciona um dicionário para atributos adicionais
+        [BsonElement("additionalAttributes")]
         public Dictionary<string, string> AdditionalAttributes { get; set; }
 
         /// <summary>

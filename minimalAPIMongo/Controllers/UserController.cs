@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using minimalAPIMongo.Domains;
 using minimalAPIMongo.Services;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace minimalAPIMongo.Controllers
@@ -62,18 +63,32 @@ namespace minimalAPIMongo.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create([FromBody] User user)
+        public async Task<ActionResult<User>> Create([FromBody] User user)
         {
             try
             {
+                // Garantir que o Id não seja fornecido na solicitação POST
+                if (!string.IsNullOrEmpty(user.Id))
+                {
+                    return BadRequest("Id should not be provided when creating a new user.");
+                }
+
+                // Definir um novo Id gerado pelo MongoDB
+                user.Id = ObjectId.GenerateNewId().ToString();
+
+                // Inserir o usuário no banco de dados
                 await _user.InsertOneAsync(user);
-                return StatusCode(201, user);
+
+                // Retornar a resposta com o código 201 (Created)
+                return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
             }
             catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
         }
+
+
 
         [HttpPut("{id:length(24)}")]
         public async Task<ActionResult> Update(string id, [FromBody] User updatedUser)

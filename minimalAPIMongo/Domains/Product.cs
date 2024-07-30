@@ -18,14 +18,16 @@ namespace minimalAPIMongo.Domains
         public decimal Price { get; set; }
 
         //adiciona um dicionário para atributos adicionais
-        public Dictionary<string, string> AdditionalAtributes { get; set; }
+        [BsonElement("additionalAttributes")]
+        public Dictionary<string, string> AdditionalAttributes { get; set; }
 
         /// <summary>
         /// Ao ser instânciado um objeto da classe Product, o atributo AdditionAttributes já virá com um novo dicionário e portanto habilitado para adicionar + atributos
         /// </summary>
-        public Product() { 
+        public Product() {
 
-            AdditionalAtributes = new Dictionary<string, string>(); 
+            
+            AdditionalAttributes = new Dictionary<string, string>(); 
         }
     }
 }
