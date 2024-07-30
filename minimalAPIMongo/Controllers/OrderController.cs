@@ -16,6 +16,7 @@ namespace minimalAPIMongo.Controllers
         /// </summary>
         private readonly IMongoCollection<Order> _order;
 
+
         /// <summary>
         /// Construtor que recebe como dependência o obj da classe MongoDbService
         /// </summary>
