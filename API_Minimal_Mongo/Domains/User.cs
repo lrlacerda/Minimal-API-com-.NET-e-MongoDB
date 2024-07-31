@@ -1,5 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace API_Minimal_Mongo.Domains
 {
@@ -9,7 +9,7 @@ namespace API_Minimal_Mongo.Domains
         [BsonIgnoreIfDefault]
         public string? Id { get; set; }
 
-        [BsonElement("nome")]
+        [BsonElement("name")]
         public string? Name { get; set; }
 
         [BsonElement("email")]
@@ -18,8 +18,8 @@ namespace API_Minimal_Mongo.Domains
         [BsonElement("password")]
         public string? Password { get; set; }
 
+        [BsonElement("additionalAttributes")]
         public Dictionary<string, string> AdditionalAttributes { get; set; }
-
 
         public User()
         {

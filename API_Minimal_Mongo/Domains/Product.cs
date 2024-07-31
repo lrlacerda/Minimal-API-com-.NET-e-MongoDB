@@ -14,6 +14,7 @@ namespace API_Minimal_Mongo.Domains
         [BsonElement("price")]
         public decimal Price { get; set; }
 
+        [BsonElement("additionalAttributes")]
         //Adiciona um Dicionario para atributos 
         public Dictionary<string, string> AdditionalAttributes { get; set; }
 
